@@ -60,7 +60,7 @@ if [ "$isLoggedIn" == 1 ]; then
 else 
   login
   checkLogin
-  if [ "$isLoggedIn" == 1 ]; then
+  if [ "$isLoggedIn" == 0 ]; then
     echo "Can't login to the unifi dashboard. Please check the logs and responses" >> $logFile
     exit 1
   fi
