@@ -1,12 +1,12 @@
 #!/bin/bash
 
-apiUrlToQuery="$1"
-unifiUrl=$(grep unifiUrl .env | cut -d '=' -f2)
-unifiUsername=$(grep unifiUsername .env | cut -d '=' -f2)
-unifiPassword=$(grep unifiPassword .env | cut -d '=' -f2)
-authCookiePath=$(grep authCookiePath .env | cut -d '=' -f2)
-logFile=$(grep logFile .env | cut -d '=' -f2)
+unifiUrl="$1"
+unifiUsername=$2
+unifiPassword=$3
+apiUrlToQuery="$4"
 
+authCookiePath=cookiejar
+logFile=connections.log
 isLoggedIn=0
 response=""
 
